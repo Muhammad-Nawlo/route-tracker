@@ -18,8 +18,8 @@
     "require": {
         "php": "^8.0",
         "ext-json": "*",
-        "illuminate/console": "^12.18",
-        "illuminate/support": "^12.18"
+        "illuminate/console": "^10.0 || ^11.0 || ^12.0",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
