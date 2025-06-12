@@ -18,7 +18,9 @@ beforeEach(function () {
 
 it('logs route usage', function () {
     // Make a GET request to the test route
+    // @phpstan-ignore-next-line
     $this->get('/test-route')->assertOk();
+
 
     // Assert that the route-usage.json file was created in the storage disk
     Storage::assertExists('route-usage.json');

@@ -1,9 +1,15 @@
 {
     "name": "muhammad-nawlo/route-tracker",
-    "description": "This package to make track of laravel project routers",
+    "description": "Track usage and hits of Laravel routes automatically with this simple package.",
     "keywords": [
         "Muhammad-Nawlo",
-        "route-tracker"
+        "route-tracker",
+        "laravel",
+        "routes",
+        "tracker",
+        "usage",
+        "logs",
+        "monitoring"
     ],
     "type": "library",
     "homepage": "https://github.com/muhammad-nawlo/route-tracker",
@@ -25,6 +31,7 @@
         "laravel/pint": "^1.0",
         "orchestra/testbench": "^10.4",
         "pestphp/pest": "^3.8",
+        "phpstan/phpstan": "^2.1",
         "spatie/ray": "^1.28"
     },
     "autoload": {

@@ -12,7 +12,6 @@ class TrackRouteUsage
     {
         $response = $next($request);
 
-        logger('TrackRouteUsage middleware fired for route: '.$request->path());
 
         if (! config('route-tracker.enabled')) {
             return $response;
@@ -22,7 +21,6 @@ class TrackRouteUsage
         $name = $route?->getName() ?? $request->path();
 
         if ($name) {
-            logger("Logging route usage for: {$name}");
             UsageLogger::log($name);
         }
 

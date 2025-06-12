@@ -12,7 +12,6 @@ class UsageLogger
     {
         $path = 'route-usage.json';
         $data = [];
-        logger("Logging route usage for: $route");
         if (Storage::exists($path)) {
             $data = json_decode(Storage::get($path), true);
         }
