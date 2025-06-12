@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use MuhammadNawlo\RouteTracker\Middleware\TrackRouteUsage;
 
-
 beforeEach(function () {
     // Fake the default storage disk so no real files are created
     Storage::fake();
@@ -37,5 +36,3 @@ it('logs route usage', function () {
     // Assert last_used is not null
     expect($data['test-route']['last_used'])->not->toBeNull();
 });
-
-
