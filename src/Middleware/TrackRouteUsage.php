@@ -3,18 +3,18 @@
 namespace MuhammadNawlo\RouteTracker\Middleware;
 
 use Closure;
-use MuhammadNawlo\RouteTracker\Support\UsageLogger;
 use Illuminate\Http\Request;
+use MuhammadNawlo\RouteTracker\Support\UsageLogger;
+
 class TrackRouteUsage
 {
     public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
 
-        logger('TrackRouteUsage middleware fired for route: ' . $request->path());
+        logger('TrackRouteUsage middleware fired for route: '.$request->path());
 
-
-        if (!config('route-tracker.enabled')) {
+        if (! config('route-tracker.enabled')) {
             return $response;
         }
 

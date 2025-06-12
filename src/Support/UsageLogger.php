@@ -27,7 +27,7 @@ class UsageLogger
 
     public static function getUsage()
     {
-        if (!Storage::exists(self::$file)) {
+        if (! Storage::exists(self::$file)) {
             return [];
         }
 

@@ -1,6 +1,6 @@
 <?php
-namespace MuhammadNawlo\RouteTracker\Commands;
 
+namespace MuhammadNawlo\RouteTracker\Commands;
 
 use Illuminate\Console\Command;
 use MuhammadNawlo\RouteTracker\Support\UsageLogger;
@@ -8,6 +8,7 @@ use MuhammadNawlo\RouteTracker\Support\UsageLogger;
 class RouteUsageCommand extends Command
 {
     protected $signature = 'route:usage';
+
     protected $description = 'Display route usage statistics';
 
     public function handle()
@@ -16,6 +17,7 @@ class RouteUsageCommand extends Command
 
         if (empty($data)) {
             $this->info('No route usage data found.');
+
             return;
         }
 
