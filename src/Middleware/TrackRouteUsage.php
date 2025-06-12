@@ -12,7 +12,6 @@ class TrackRouteUsage
     {
         $response = $next($request);
 
-
         if (! config('route-tracker.enabled')) {
             return $response;
         }
