@@ -1,48 +1,61 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "muhammad-nawlo/route-tracker",
+    "description": "This package to make track of laravel project routers",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "Muhammad-Nawlo",
+        "route-tracker"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "type": "library",
+    "homepage": "https://github.com/muhammad-nawlo/route-tracker",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Muhammad Nawlo",
+            "email": "nawlomuhammadit@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "ext-json": "*",
+        "illuminate/console": "^12.18",
+        "illuminate/support": "^12.18"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.4",
+        "pestphp/pest": "^3.8",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "MuhammadNawlo\\RouteTracker\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "MuhammadNawlo\\RouteTracker\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
+            "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MuhammadNawlo\\RouteTracker\\RouteTrackerServiceProvider"
+            ]
+        }
+    }
 }
