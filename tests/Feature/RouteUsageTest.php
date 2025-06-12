@@ -21,7 +21,6 @@ it('logs route usage', function () {
     // @phpstan-ignore-next-line
     $this->get('/test-route')->assertOk();
 
-
     // Assert that the route-usage.json file was created in the storage disk
     Storage::assertExists('route-usage.json');
 
